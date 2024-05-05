@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BoilerPlateRails</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application" %>
+  </head>
+
+  <body>
+    <%= yield %>
+    <%= javascript_include_tag 'bootstrap.min.js' %>
+    <%= javascript_include_tag 'popper.min.js' %>
+    <footer class="bg-primary text-white text-center py-3">
+      <p class="mb-0 text-light">
+        <script data-cmp-info="6">document.write(new Date().getFullYear())</script>2024
+        © TouchRails Powered by <i class="mdi mdi-heart text-danger"></i> by
+        <a href="https://www.viptechnologies.in/" target="_blank" class="text-light">viptechnologies India</a>.
+      </p>
+    </footer>
+  </body>
+</html>
