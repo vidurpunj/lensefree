@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Lensefree</title>
+    <title>Lensfree</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,13 +10,19 @@
   </head>
 
   <body>
+  <header id="topnav" class="defaultscroll sticky container">
+    <a class="logo" href="/">
+      <%= image_tag  'logo.png', class: 'logo-dark-mode', size: '50x50', alt: ''%>
+      <span style="color: #3274f0" >Lensfree</span>
+    </a>
+  </header>
     <%= yield %>
     <%= javascript_include_tag 'bootstrap.min.js' %>
     <%= javascript_include_tag 'popper.min.js' %>
     <footer class="bg-primary text-white text-center py-3">
       <p class="mb-0 text-light">
-        <script data-cmp-info="6">document.write(new Date().getFullYear())</script>2024
-        © Lensefree.co Powered by <i class="mdi mdi-heart text-danger"></i> by
+        <script data-cmp-info="6">document.write(new Date().getFullYear())</script>
+        © Lensfree.co Powered by <i class="mdi mdi-heart text-danger"></i> by
         <a href="https://touchrails.com/" target="_blank" class="text-light">TouchRails</a>.
       </p>
     </footer>
