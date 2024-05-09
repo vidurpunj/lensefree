@@ -7,24 +7,120 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application" %>
+    <%= stylesheet_link_tag "application" %>
+    <%= stylesheet_link_tag "css/bootstrap.min.css", media: "all", integrity: true, crossorigin: "anonymous" %>
+    <%= stylesheet_link_tag "css/tiny-slider.css", media: "all", integrity: true, crossorigin: "anonymous" %>
+    <%= stylesheet_link_tag "css/tobii.min.css", media: "all", integrity: true, crossorigin: "anonymous" %>
+    <%= stylesheet_link_tag "css/materialdesignicons.min.css", media: "all", integrity: true, crossorigin: "anonymous" %>
+    <%= stylesheet_link_tag "css/quill.snow.css", media: "all", integrity: true, crossorigin: "anonymous" %>
+    <link href="https://unicons.iconscout.com/release/v3.0.6/css/line.css" rel="stylesheet" />
   </head>
 
   <body>
   <header id="topnav" class="defaultscroll sticky container">
     <a class="logo" href="/">
-      <%= image_tag  'Newlogo.jpg', class: 'logo-dark-mode', size: '100x50', alt: ''%>
       <span style="color: #3274f0" ></span>
     </a>
   </header>
+  <header id="topnav" class="defaultscroll sticky">
+    <div class="container">
+      <!-- Logo container-->
+      <a class="logo" href="/">
+        <%= image_tag  'Newlogo.jpg', class: 'logo-dark-mode', size: '100x50', alt: ''%>
+        <span style="color: #3274f0" ></span>
+      </a>
+      <!-- End Logo container-->
+      <div class="menu-extras">
+        <div class="menu-item">
+          <!-- Mobile menu toggle-->
+          <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
+            <div class="lines">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </a>
+          <!-- End mobile menu toggle-->
+        </div>
+      </div>
+
+      <div id="navigation">
+        <!-- Navigation Menu-->
+        <ul class="navigation-menu nav-right nav-light">
+          <li class="has-submenu parent-parent-menu-item">
+            <%= link_to 'Home', root_path %>
+          </li>
+        </ul><!--end navigation menu-->
+      </div><!--end navigation-->
+    </div><!--end container-->
+  </header><!--end header-->
     <%= yield %>
     <%= javascript_include_tag 'bootstrap.min.js' %>
     <%= javascript_include_tag 'popper.min.js' %>
-    <footer class="bg-primary text-white text-center py-3">
-      <p class="mb-0 text-light">
-        <script data-cmp-info="6">document.write(new Date().getFullYear())</script>
-        © Lensfree.co Powered by <i class="mdi mdi-heart text-danger"></i> by
-        <a href="https://touchrails.com/" target="_blank" class="text-light">TouchRails</a>.
-      </p>
-    </footer>
+  <footer class="footer bg-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="footer-py-60">
+            <div class="row">
+              <div class="col-lg-4 col-12">
+                <a href="#" class="logo-footer">
+                  <%#= image_tag 'logo.jpg', height: '26', alt: '' %>
+                </a>
+                <ul class="list-unstyled social-icon foot-social-icon mb-0 mt-4">
+                  <li class="list-inline-item">
+                    <a href="http://linkedin.com/company/shreethemes" target="_blank" class="rounded"><i class="uil uil-linkedin" title="Linkedin"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="https://www.facebook.com/shreethemes" target="_blank" class="rounded"><i class="uil uil-facebook-f align-middle" title="facebook"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="https://www.instagram.com/shreethemes/" target="_blank" class="rounded"><i class="uil uil-instagram align-middle" title="instagram"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="https://twitter.com/shreethemes" target="_blank" class="rounded"><i class="uil uil-twitter align-middle" title="twitter"></i></a>
+                  </li>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="mailto:support@shreethemes.in" class="rounded"><i class="uil uil-envelope align-middle" title="email"></i></a>
+                  </li>
+                </ul><!--end icon-->
+              </div><!--end col-->
+            </div><!--end row-->
+          </div>
+        </div><!--end col-->
+      </div><!--end row-->
+    </div><!--end container-->
+
+    <div class="footer-py-30 footer-bar bg-footer">
+      <div class="">
+        <div class="row">
+          <div class="col-12">
+            <div class="text-center">
+              <p class="mb-0 text-muted text-bg-light">
+                <script>document.write(new Date().getFullYear())</script>
+                © Lensfree.co Powered by <i class="mdi mdi-heart text-danger"></i> by
+                <a href="https://www.touchrails.com/" target="_blank" class="text-reset">touchrails</a>.
+              </p>
+            </div>
+          </div><!--end col-->
+        </div><!--end row-->
+      </div><!--end container-->
+    </div>
+    <amp-consent id="ConsentManager" layout="nodisplay" type="ConsentManager">
+      <script type="application/json">
+    {
+      "postPromptUI": "postPromptUI",
+      "clientConfig": {
+        "cdid": "9f12f7e901ffd",
+        "params": ""
+      }
+    }
+  </script>
+      <div id="postPromptUI">
+        <button on="tap:ConsentManager.prompt()" role="button">Manage privacy settings</button>
+      </div>
+    </amp-consent>
+  </footer><!--end footer-->
   </body>
 </html>

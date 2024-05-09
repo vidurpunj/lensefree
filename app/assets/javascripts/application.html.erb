@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type="text/javascript" data-cmp-ab="1" src="https://cdn.consentmanager.net/delivery/autoblocking/9f12f7e901ffd.js"
+            data-cmp-host="c.delivery.consentmanager.net" data-cmp-cdn="cdn.consentmanager.net" data-cmp-codesrc="0">
+    </script>
+    <script>
+        // Define dataLayer and the gtag function.
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+
+        // IMPORTANT - DO NOT COPY/PASTE WITHOUT MODIFYING REGION LIST
+
+        // Set default consent for specific regions according to your requirements
+        gtag('consent', 'default', {
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'analytics_storage': 'denied',
+            'regions': ['IN']
+        });
+
+        // Set default consent for all other regions according to your requirements
+        gtag('consent', 'default', {
+            'ad_storage': 'granted',
+            'ad_user_data': 'granted',
+            'ad_personalization': 'granted',
+            'analytics_storage': 'granted'
+        });
+    </script>
+    <!--Banner script here!-->
+
+    <script async custom-element="amp-consent" src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"></script><meta name="amp-consent-blocking" content="amp-ad">
+    <title>TouchRails</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%= favicon_link_tag 'favicon.ico', rel: 'shortcut icon' %>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application" %>
+    <%= stylesheet_link_tag "css/bootstrap.min.css", media: "all", integrity: true, crossorigin: "anonymous" %>
+    <%= stylesheet_link_tag "css/tiny-slider.css", media: "all", integrity: true, crossorigin: "anonymous" %>
+    <%= stylesheet_link_tag "css/tobii.min.css", media: "all", integrity: true, crossorigin: "anonymous" %>
+    <%= stylesheet_link_tag "css/materialdesignicons.min.css", media: "all", integrity: true, crossorigin: "anonymous" %>
+    <%= stylesheet_link_tag "css/quill.snow.css", media: "all", integrity: true, crossorigin: "anonymous" %>
+    <link href="https://unicons.iconscout.com/release/v3.0.6/css/line.css" rel="stylesheet" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FS4Y6BKBJ6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-FS4Y6BKBJ6');
+    </script>
+  </head>
+
+  <body>
+  <header id="topnav" class="defaultscroll sticky">
+    <div class="container">
+      <!-- Logo container-->
+      <a class="logo" href="/">
+        <%= image_tag  'logo.jpg', class: 'logo-dark-mode', size: '50x50', alt: ''%>
+       <span style="color: #3274f0" >TouchRails</span>
+      </a>
+      <!-- End Logo container-->
+      <div class="menu-extras">
+        <div class="menu-item">
+          <!-- Mobile menu toggle-->
+          <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
+            <div class="lines">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </a>
+          <!-- End mobile menu toggle-->
+        </div>
+      </div>
+
+      <div id="navigation">
+        <!-- Navigation Menu-->
+        <ul class="navigation-menu nav-right nav-light">
+          <li class="has-submenu parent-parent-menu-item">
+            <%= link_to 'Home', root_path %>
+          </li>
+
+          <li class="has-submenu parent-parent-menu-item">
+            <%= link_to 'About Us', about_index_path %>
+          </li>
+
+          <li class="has-submenu parent-parent-menu-item">
+            <%= link_to 'Portfolio', portfolio_index_path %>
+          </li>
+
+          <li class="has-submenu parent-parent-menu-item">
+            <%= link_to 'Blogs', blogs_path %>
+            <span class="menu-arrow"></span>
+          </li>
+
+          <li>
+            <%= link_to 'Contact Us', contacts_path, class: 'sub-menu-item' %>
+          </li>
+          <li>
+            <% if user_signed_in? %>
+              <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'sub-menu-item' %>
+            <% else %>
+              <%= link_to 'Login', new_user_session_path, class: 'sub-menu-item' %>
+            <% end %>
+          </li>
+        </ul><!--end navigation menu-->
+      </div><!--end navigation-->
+    </div><!--end container-->
+  </header><!--end header-->
+
+    <%= yield %>
+  <!-- Footer Start -->
+  <footer class="footer bg-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="footer-py-60">
+            <div class="row">
+              <div class="col-lg-4 col-12">
+                <a href="#" class="logo-footer">
+                  <%= image_tag 'logo.jpg', height: '26', alt: '' %>
+                </a>
+                <p class="mt-4">Start working with TouchRails that can provide everything you.</p>
+                <ul class="list-unstyled social-icon foot-social-icon mb-0 mt-4">
+                  <li class="list-inline-item">
+                    <a href="http://linkedin.com/company/shreethemes" target="_blank" class="rounded"><i class="uil uil-linkedin" title="Linkedin"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="https://www.facebook.com/shreethemes" target="_blank" class="rounded"><i class="uil uil-facebook-f align-middle" title="facebook"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="https://www.instagram.com/shreethemes/" target="_blank" class="rounded"><i class="uil uil-instagram align-middle" title="instagram"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="https://twitter.com/shreethemes" target="_blank" class="rounded"><i class="uil uil-twitter align-middle" title="twitter"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="mailto:support@shreethemes.in" class="rounded"><i class="uil uil-envelope align-middle" title="email"></i></a>
+                  </li>
+                </ul><!--end icon-->
+              </div><!--end col-->
+
+              <div class="col-lg-8 col-12">
+                <div class="row">
+                  <div class="col-md-4 col-12 mt-4 mt-lg-0 pt-2 pt-lg-0">
+                    <h6 class="footer-head">Company</h6>
+                    <ul class="list-unstyled footer-list mt-4">
+                      <li>
+                        <%= link_to about_index_path, class: "text-foot" do %>
+                          <i class="uil uil-angle-right-b me-1"></i> About us
+                        <% end %>
+                      </li>
+                      <li>
+                        <%= link_to my_services_path, class: 'text-foot' do %>
+                          <i class="uil uil-angle-right-b me-1"></i>Services
+                        <% end %>
+                      </li>
+                      <li>
+                        <%= link_to teams_path, class: 'text-foot' do %>
+                          <i class="uil uil-angle-right-b me-1"></i> Team
+                        <% end %>
+                      </li>
+                      <li>
+                        <%= link_to pricing_index_path, class: 'text-foot' do %>
+                          <i class="uil uil-angle-right-b me-1"></i> Pricing
+                        <% end %>
+                      </li>
+                      <li>
+                        <%= link_to blogs_path, class: 'text-foot' do %>
+                          <i class="uil uil-angle-right-b me-1"></i> Blog
+                        <% end %>
+                      </li>
+                      <li>
+                        <%= link_to projects_path, class: 'text-foot' do %>
+                          <i class="uil uil-angle-right-b me-1"></i> Projects
+                        <% end %>
+                    </ul>
+                  </div><!--end col-->
+
+                  <div class="col-md-4 col-12 mt-4 mt-lg-0 pt-2 pt-lg-0">
+                    <h6 class="footer-head">Usefull Links</h6>
+                    <ul class="list-unstyled footer-list mt-4">
+                      <li>
+                        <%= link_to terms_of_use_index_path, class: 'text-foot' do %>
+                          <i class="uil uil-angle-right-b me-1"></i> Terms of Services
+                        <% end %>
+                      </li>
+                      <li>
+                        <%= link_to privacy_policy_index_path, class: 'text-foot' do %>
+                          <i class="uil uil-angle-right-b me-1"></i> Privacy Policy
+                        <% end %>
+                      </li>
+                      <li>
+                        <%= link_to contacts_path, class: 'text-foot' do %>
+                          <i class="uil uil-angle-right-b me-1"></i> Contact Us
+                        <% end %>
+                      </li>
+                    </ul>
+                  </div><!--end col-->
+
+                  <div class="col-md-4 col-12 mt-4 mt-lg-0 pt-2 pt-lg-0">
+                    <h6 class="footer-head">Resources</h6>
+                    <ul class="list-unstyled footer-list mt-4">
+                      <li>
+                        <%= link_to faq_index_path, class: 'text-foot' do %>
+                          <i class="uil uil-angle-right-b me-1"></i> FAQ
+                        <% end %>
+                      </li>
+                      <li>
+                        <%= link_to contacts_path, class: 'text-foot' do %>
+                          <i class="uil uil-angle-right-b me-1"></i> Support desk
+                        <% end %>
+                      </li>
+                    </ul>
+                  </div><!--end col-->
+                </div>
+              </div>
+            </div><!--end row-->
+          </div>
+        </div><!--end col-->
+      </div><!--end row-->
+    </div><!--end container-->
+
+    <div class="footer-py-30 footer-bar bg-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="text-center">
+              <p class="mb-0 text-muted text-bg-light">
+                <script>document.write(new Date().getFullYear())</script>
+                © TouchRails Powered by <i class="mdi mdi-heart text-danger"></i> by
+                <a href="https://www.viptechnologies.in/" target="_blank" class="text-reset">viptechnologies India</a>.
+              </p>
+            </div>
+          </div><!--end col-->
+        </div><!--end row-->
+      </div><!--end container-->
+    </div>
+    <amp-consent id="ConsentManager" layout="nodisplay" type="ConsentManager">
+      <script type="application/json">
+    {
+      "postPromptUI": "postPromptUI",
+      "clientConfig": {
+        "cdid": "9f12f7e901ffd",
+        "params": ""
+      }
+    }
+  </script>
+      <div id="postPromptUI">
+        <button on="tap:ConsentManager.prompt()" role="button">Manage privacy settings</button>
+      </div>
+    </amp-consent>
+  </footer><!--end footer-->
+  <!-- End -->
+  <a href="javascript:void(0)" onclick="topFunction()" id="back-to-top" class="back-to-top rounded-pill"><i class="mdi mdi-arrow-up"></i></a>
+  <!-- Back to top -->
+
+    <%= javascript_include_tag  'bootstrap.bundle.min.js' %>
+    <%= javascript_include_tag  'tobii.min.js' %>
+    <%= javascript_include_tag  'tiny-slider.js' %>
+    <%= javascript_include_tag  'feather.min.js' %>
+    <%= javascript_include_tag  'plugins.init.js' %>
+    <%= javascript_include_tag  'app.js' %>
+    <%= javascript_include_tag  'quill.js' %>
+  </body>
+</html>
