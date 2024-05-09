@@ -1,26 +1,66 @@
-<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+<!-- Hero Start -->
+<section class="home-slider position-relative">
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="3000">
+        <div class="bg-home d-flex align-items-center" style="background: url('<%= asset_path 'about5.jpg'%>') top;">
+          <div class="bg-overlay"></div>
+          <div class="container">
+            <div class="row justify-content-center mt-5">
+              <div class="col-lg-12 text-center">
+                <div class="title-heading mt-4">
+                  <h4 class="display-3 fw-bold text-white title-dark mb-3">We Prepare Better Way <br> For Accelerators</h4>
+                </div>
+              </div><!--end col-->
+            </div><!--end row-->
+          </div><!--end container-->
+        </div><!--end slide-->
+      </div>
+
+      <div class="carousel-item" data-bs-interval="3000">
+        <div class="bg-home d-flex align-items-center" style="background: url(<%= asset_path 'port01.jpg' %>) top;">
+          <div class="bg-overlay"></div>
+          <div class="container">
+            <div class="row justify-content-center mt-5">
+              <div class="col-lg-12 text-center">
+                <div class="title-heading mt-4">
+<!--                  <img src="images/logo-icon-light.png" height="260" alt="">-->
+                  <h4 class="display-3 fw-bold text-white title-dark mb-3">We provide best in class user experiencec</h4>
+                </div>
+              </div><!--end col-->
+            </div><!--end row-->
+          </div><!--end container-->
+        </div><!--end slide-->
+      </div>
+
+      <div class="carousel-item" data-bs-interval="3000">
+        <div class="bg-home d-flex align-items-center" style="background: url(<%= asset_path 'team.jpg' %>) top;">
+          <div class="bg-overlay"></div>
+          <div class="container">
+            <div class="row justify-content-center mt-5">
+              <div class="col-lg-12 text-center">
+                <div class="title-heading mt-4">
+                  <h4 class="display-3 fw-bold text-white title-dark mb-3">we deal in lenses and specs</h4>
+                </div>
+              </div><!--end col-->
+            </div><!--end row-->
+          </div><!--end container-->
+        </div><!--end slide-->
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+
   </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <%= image_tag 'about5.jpg', class: "d-block w-80", alt: 'First slide' %>
-    </div>
-    <div class="carousel-item">
-      <%= image_tag 'port01.jpg', class: "d-block w-80", alt: 'Second slide' %>
-    </div>
-    <div class="carousel-item">
-      <%= image_tag 'team.jpg', class: "d-block w-80", alt: 'Third slide' %>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon bg-gray" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon bg-gray" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+</section><!--end section-->
