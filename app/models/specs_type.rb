@@ -1,0 +1,2 @@
+class SpecsType < ApplicationRecord
+end

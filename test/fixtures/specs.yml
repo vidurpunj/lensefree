@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  specs_type: one
+  front: MyString
+  left: MyString
+  right: MyString
+  back: MyString
+
+two:
+  specs_type: two
+  front: MyString
+  left: MyString
+  right: MyString
+  back: MyString

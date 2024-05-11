@@ -1,0 +1,72 @@
+<!-- Hero Start -->
+<section class="bg-half-170 d-table w-100" style="background: url(<%= asset_path 'bg/about.jpg' %>) center;">
+  <div class="bg-overlay bg-gradient-overlay"></div>
+  <div class="container">
+    <div class="row mt-5 justify-content-center">
+      <div class="col-12">
+        <div class="title-heading text-center">
+          <small class="text-white-50 mb-1 fw-medium text-uppercase mx-auto">Who we are?</small>
+          <h5 class="heading fw-semibold mb-0 page-heading text-white title-dark">About Our Company</h5>
+        </div>
+      </div><!--end col-->
+    </div><!--end row-->
+
+    <div class="position-middle-bottom">
+      <nav aria-label="breadcrumb" class="d-block">
+        <ul class="breadcrumb breadcrumb-muted mb-0 p-0">
+          <li class="breadcrumb-item"><a href="index.html">Starty</a></li>
+          <li class="breadcrumb-item active" aria-current="page">About Us</li>
+        </ul>
+      </nav>
+    </div>
+  </div><!--end container-->
+</section><!--end section-->
+<!-- Hero End -->
+<Section class="container mt-4 mb-4">
+  <% flash.each do |type, msg| %>
+    <div class="alert alert-<%= type.eql?('notice') ? 'success' : 'danger' %>">
+      <%= msg %>
+    </div>
+  <% end %>
+  <%= form_with(model: @spec, url: specs_path, local: true) do |f| %>
+    <div class="row mt-2">
+      <div class="col-md-6"><%= f.label :title %></div>
+      <div class="col-md-6"><%= f.text_field :title, class: 'form-control', required: true %></div>
+    </div>
+    <div class="row mt-2">
+      <div class="col-md-6"><%= f.label :description %></div>
+      <div class="col-md-6"><%= f.text_field :description, class: 'form-control', required: true %></div>
+    </div>
+    <div class="row mt-2">
+      <div class="col-md-6"><%= f.label :specs_type %></div>
+      <div class="col-md-6">
+        <%= f.collection_select :specs_type_id, SpecsType.order(:name), :id, :name,
+                                { prompt: "Select specs type" }, { class: 'form-control', required: true }  %>
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col-md-6"><%= f.label :spec_type %></div>
+      <div class="col-md-6"><%= f.file_field :front, class: 'form-control', required: true %></div>
+    </div>
+    <div class="row mt-2">
+      <div class="col-md-6"><%= f.label :front_image %></div>
+      <div class="col-md-6"><%= f.file_field :front, class: 'form-control', required: true %></div>
+    </div>
+    <div class="row mt-2">
+      <div class="col-md-6"><%= f.label :left_image %></div>
+      <div class="col-md-6"><%= f.file_field :left, class: 'form-control', required: true %></div>
+    </div>
+    <div class="row mt-2">
+      <div class="col-md-6"><%= f.label :right_image %></div>
+      <div class="col-md-6"><%= f.file_field :right, class: 'form-control', required: true %></div>
+    </div>
+    <div class="row mt-2">
+      <div class="col-md-6"><%= f.label :back_image %></div>
+      <div class="col-md-6"><%= f.file_field :back, class: 'form-control', required: true %></div>
+    </div>
+    <div class="row mt-2">
+      <div class="col-md-6"></div>
+      <div class="col-md-6"><%= f.submit 'create', class: 'form-control btn btn-primary' %></div>
+    </div>
+  <% end %>
+</Section>

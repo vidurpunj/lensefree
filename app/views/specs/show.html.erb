@@ -1,0 +1,66 @@
+<!-- Hero Start -->
+<section class="bg-half-170 d-table w-100" style="background: url('<%= asset_path 'bg/port01.jpg'%>');">
+  <div class="bg-overlay bg-gradient-overlay"></div>
+  <div class="container">
+    <div class="row mt-5 justify-content-center">
+      <div class="col-12">
+        <div class="title-heading text-center">
+          <h5 class="heading fw-semibold page-heading text-white title-dark">Portfolio</h5>
+          <p class="text-white-50 para-desc mx-auto mb-0">our Latest collection</p>
+        </div>
+      </div><!--end col-->
+    </div><!--end row-->
+  </div><!--end container-->
+</section><!--end section-->
+<!-- Hero End -->
+<section class="container">
+  <div class="row mt-2">
+    <div class="col-md-6">
+      Name:
+    </div>
+    <div class="col-md-6">
+      <%= @spec.title %>
+    </div>
+  </div>
+  <div class="row mt-2">
+    <div class="col-md-6">
+      Description:
+    </div>
+    <div class="col-md-6">
+      <%= @spec.title %>
+    </div>
+  </div>
+  <div class="row mt-2">
+    <div class="col-md-6">
+      Front:
+    </div>
+    <div class="col-md-6">
+      <%= image_tag @spec.front_url, size: '100x100' %>
+    </div>
+  </div>
+  <div class="row mt-2">
+    <div class="col-md-6">
+      Left:
+    </div>
+    <div class="col-md-6">
+      <%= image_tag @spec.left_url, size: '100x100' %>
+    </div>
+  </div>
+
+  <div class="row mt-2">
+    <div class="col-md-6">
+      Right:
+    </div>
+    <div class="col-md-6">
+      <%= image_tag @spec.right_url, size: '100x100' %>
+    </div>
+  </div>
+  <div class="row mt-2">
+    <div class="col-md-6">
+      Back:
+    </div>
+    <div class="col-md-6">
+      <%= image_tag @spec.back_url, size: '100x100' %>
+    </div>
+  </div>
+</section>
